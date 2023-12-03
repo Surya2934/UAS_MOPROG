@@ -54,3 +54,16 @@ class ProductCard extends StatelessWidget {
                     color: kPrimaryColor,
                   ),
                 ),
+                InkWell(
+                  borderRadius: BorderRadius.circular(50),
+                  onTap: () {},
+                  child: Container(
+                    padding: const EdgeInsets.all(6),
+                    height: 24,
+                    width: 24,
+                    decoration: BoxDecoration(
+                      color: product.isFavourite
+                          ? kPrimaryColor.withOpacity(0.15)
+                          : kSecondaryColor.withOpacity(0.1),
+                      shape: BoxShape.circle,
+                    ),
