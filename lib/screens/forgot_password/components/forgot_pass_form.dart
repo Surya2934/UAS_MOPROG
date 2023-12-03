@@ -13,3 +13,43 @@ class ForgotPassForm extends StatefulWidget {
   @override
   _ForgotPassFormState createState() => _ForgotPassFormState();
 }
+
+class _ForgotPassFormState extends State<ForgotPassForm> {
+  final _formKey = GlobalKey<FormState>();
+  List<String> errors = [];
+  String? email;
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: [
+          TextFormField(
+            keyboardType: TextInputType.emailAddress,
+            onSaved: (newValue) => email = newValue,
+            onChanged: (value) {
+              if (value.isNotEmpty && errors.contains(kEmailNullError)) {
+                setState(() {
+                  errors.remove(kEmailNullError);
+                });
+              } else if (emailValidatorRegExp.hasMatch(value) &&
+                  errors.contains(kInvalidEmailError)) {
+                setState(() {
+                  errors.remove(kInvalidEmailError);
+                });
+              }
+              return;
+            },
+            validator: (value) {
+              if (value!.isEmpty && !errors.contains(kEmailNullError)) {
+                setState(() {
+                  errors.add(kEmailNullError);
+                });
+              } else if (!emailValidatorRegExp.hasMatch(value) &&
+                  !errors.contains(kInvalidEmailError)) {
+                setState(() {
+                  errors.add(kInvalidEmailError);
+                });
+              }
+              return null;
+            },
