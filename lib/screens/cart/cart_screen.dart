@@ -31,3 +31,17 @@ class _CartScreenState extends State<CartScreen> {
           ],
         ),
       ),
+       body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: ListView.builder(
+          itemCount: demoCarts.length,
+          itemBuilder: (context, index) => Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Dismissible(
+              key: Key(demoCarts[index].product.id.toString()),
+              direction: DismissDirection.endToStart,
+              onDismissed: (direction) {
+                setState(() {
+                  demoCarts.removeAt(index);
+                });
+              },
