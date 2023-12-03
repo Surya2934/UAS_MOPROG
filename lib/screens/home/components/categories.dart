@@ -31,3 +31,42 @@ class Categories extends StatelessWidget {
     );
   }
 }
+
+class CategoryCard extends StatelessWidget {
+  const CategoryCard({
+    Key? key,
+    required this.icon,
+    required this.text,
+    required this.press,
+  }) : super(key: key);
+
+  final String icon, text;
+  final GestureTapCallback press;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: press,
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(16),
+            height: 56,
+            width: 56,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(81, 60, 176, 91),
+              borderRadius: BorderRadius.circular(50),
+            ),
+            child: SvgPicture.asset(
+              icon,
+              color: Color.fromARGB(255, 60, 176, 91),
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(text, textAlign: TextAlign.center)
+        ],
+      ),
+    );
+  }
+}
+
