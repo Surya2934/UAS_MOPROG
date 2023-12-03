@@ -50,3 +50,18 @@ class _ProductImagesState extends State<ProductImages> {
     );
   }
 }
+
+class SmallProductImage extends StatefulWidget {
+  const SmallProductImage(
+      {super.key,
+      required this.isSelected,
+      required this.press,
+      required this.image});
+
+  final bool isSelected;
+  final VoidCallback press;
+  final String image;
+
+  @override
+  State<SmallProductImage> createState() => _SmallProductImageState();
+}
