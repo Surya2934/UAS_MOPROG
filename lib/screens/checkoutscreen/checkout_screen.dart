@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/models/Cart.dart';
 import 'package:shop_app/models/Product.dart';
-import 'package:shop_app/screens/succes_payment/success_screen.dart';
+import 'package:shop_app/screens/success_payment/success_screen.dart';
 
 class CheckoutScreen extends StatefulWidget {
   @override
