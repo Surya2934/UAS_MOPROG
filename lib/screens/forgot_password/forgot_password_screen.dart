@@ -28,3 +28,17 @@ class ForgotPasswordScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+                Text(
+                  "Tolong masukkan email kamu dan kami akan mengirimkan \n kamu link untuk mengembalikan password kamu",
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 32),
+                ForgotPassForm(),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
