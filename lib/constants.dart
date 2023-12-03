@@ -32,3 +32,17 @@ const String kMatchPassError = "Password tidak sesuai";
 const String kNamelNullError = "Silahkan masukkan nama anda";
 const String kPhoneNumberNullError = "Silahkan masukkan nomor HP anda";
 const String kAddressNullError = "Silahkan masukkan alamat anda";
+
+final otpInputDecoration = InputDecoration(
+  contentPadding: const EdgeInsets.symmetric(vertical: 16),
+  border: outlineInputBorder(),
+  focusedBorder: outlineInputBorder(),
+  enabledBorder: outlineInputBorder(),
+);
+
+OutlineInputBorder outlineInputBorder() {
+  return OutlineInputBorder(
+    borderRadius: BorderRadius.circular(16),
+    borderSide: const BorderSide(color: kTextColor),
+  );
+}
