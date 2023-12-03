@@ -54,3 +54,13 @@ class _SignFormState extends State<SignForm> {
               }
               return;
             },
+            validator: (value) {
+              if (value!.isEmpty) {
+                addError(error: kEmailNullError);
+                return "";
+              } else if (!emailValidatorRegExp.hasMatch(value)) {
+                addError(error: kInvalidEmailError);
+                return "";
+              }
+              return null;
+            },
