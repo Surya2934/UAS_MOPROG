@@ -23,7 +23,7 @@ class LoginSuccessScreen extends StatelessWidget {
           const Text(
             "Login Sukses",
             style: TextStyle(
-              fontSize: 35,
+              fontSize: 30,
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
