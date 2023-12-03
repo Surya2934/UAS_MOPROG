@@ -14,3 +14,17 @@ class ProductImages extends StatefulWidget {
   @override
   _ProductImagesState createState() => _ProductImagesState();
 }
+
+class _ProductImagesState extends State<ProductImages> {
+  int selectedImage = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          width: 238,
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: Image.asset(widget.product.images[selectedImage]),
+          ),
+        ),
