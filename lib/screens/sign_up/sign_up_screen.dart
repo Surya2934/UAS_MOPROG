@@ -21,3 +21,44 @@ class SignUpScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
+                  const SizedBox(height: 16),
+                  const Text("Daftar Akun", style: headingStyle),
+                  const Text(
+                    "Lengkapi detail kamu atau lanjut \nmenggunakan sosial media",
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 16),
+                  const SignUpForm(),
+                  const SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SocalCard(
+                        icon: "assets/icons/google-icon.svg",
+                        press: () {},
+                      ),
+                      SocalCard(
+                        icon: "assets/icons/facebook-2.svg",
+                        press: () {},
+                      ),
+                      SocalCard(
+                        icon: "assets/icons/twitter.svg",
+                        press: () {},
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Dengan melanjutkan konfirmasi berarti \nAnda setuju dengan syarat dan ketentuan \nLEBAY kami!!',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
