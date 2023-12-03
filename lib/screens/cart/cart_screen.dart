@@ -45,3 +45,25 @@ class _CartScreenState extends State<CartScreen> {
                   demoCarts.removeAt(index);
                 });
               },
+              background: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFFE6E6),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Row(
+                  children: [
+                    const Spacer(),
+                    SvgPicture.asset("assets/icons/Trash.svg"),
+                  ],
+                ),
+              ),
+              child: CartCard(cart: demoCarts[index]),
+            ),
+          ),
+        ),
+      ),
+      bottomNavigationBar: const CheckoutCard(),
+    );
+  }
+}
