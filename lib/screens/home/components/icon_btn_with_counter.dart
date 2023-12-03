@@ -9,3 +9,15 @@ class IconBtnWithCounter extends StatelessWidget {
     this.numOfitem = 0,
     required this.press,
   }) : super(key: key);
+  
+  final String svgSrc;
+  final int numOfitem;
+  final GestureTapCallback press;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(100),
+      onTap: press,
+      child: Stack(
+        clipBehavior: Clip.none,
