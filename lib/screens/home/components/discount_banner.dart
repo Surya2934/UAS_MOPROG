@@ -18,3 +18,22 @@ class DiscountBanner extends StatelessWidget {
         color: const Color.fromARGB(255, 60, 176, 91),
         borderRadius: BorderRadius.circular(20),
       ),
+      child: const Text.rich(
+        TextSpan(
+          style: TextStyle(color: Colors.white),
+          children: [
+            TextSpan(text: "DISKON 12.12\n"),
+            TextSpan(
+              text: "POTONGAN HINGGA 50%",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
