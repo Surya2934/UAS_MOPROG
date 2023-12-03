@@ -28,3 +28,12 @@ class CartCard extends StatelessWidget {
             ),
           ),
         ),
+        const SizedBox(width: 20),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              cart.product.title,
+              style: const TextStyle(color: Colors.black, fontSize: 16),
+              maxLines: 2,
+            ),
