@@ -169,3 +169,21 @@ List<Product> demoProducts = [
     rating: 5.0,
     isFavourite: true,
   ),
+  Product(
+    id: 9,
+    images: [
+      "assets/images/MesinCuci.png",
+    ],
+    colors: [
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Mesin Cuci Turbo Jet Enginge",
+    price: 899.999,
+    description: description,
+    rating: 3.9,
+    isFavourite: true,
+  ),
+  
