@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/models/Cart.dart';
 import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/screens/succes_payment/success_screen.dart';
 
 class CheckoutScreen extends StatefulWidget {
   @override
@@ -114,7 +115,7 @@ late Product cart;
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  // Add your checkout logic here
+                  Navigator.pushNamed(context, SuccessPayment.routeName);
                 },
                 child: const Text('Checkout'),
               ),
