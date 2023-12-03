@@ -38,3 +38,39 @@ class _OtpFormState extends State<OtpForm> {
       focusNode!.requestFocus();
     }
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      child: Column(
+        children: [
+          SizedBox(height: MediaQuery.of(context).size.height * 0.15),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(
+                width: 60,
+                child: TextFormField(
+                  autofocus: true,
+                  obscureText: true,
+                  style: const TextStyle(fontSize: 24),
+                  keyboardType: TextInputType.number,
+                  textAlign: TextAlign.center,
+                  decoration: otpInputDecoration,
+                  onChanged: (value) {
+                    nextField(value, pin2FocusNode);
+                  },
+                ),
+              ),
+              SizedBox(
+                width: 60,
+                child: TextFormField(
+                  focusNode: pin2FocusNode,
+                  obscureText: true,
+                  style: const TextStyle(fontSize: 24),
+                  keyboardType: TextInputType.number,
+                  textAlign: TextAlign.center,
+                  decoration: otpInputDecoration,
+                  onChanged: (value) => nextField(value, pin3FocusNode),
+                ),
+              ),
