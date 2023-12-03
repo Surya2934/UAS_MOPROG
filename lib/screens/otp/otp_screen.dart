@@ -43,3 +43,20 @@ class OtpScreen extends StatelessWidget {
                 ),
                 const OtpForm(),
                 const SizedBox(height: 20),
+                GestureDetector(
+                  onTap: () {
+                    // OTP code resend
+                  },
+                  child: const Text(
+                    "Kirim Ulang Kode OTP",
+                    style: TextStyle(decoration: TextDecoration.underline),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
