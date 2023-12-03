@@ -54,3 +54,17 @@ class ColorDot extends StatelessWidget {
   final Color color;
   final bool isSelected;
 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(right: 2),
+      padding: const EdgeInsets.all(8),
+      height: 40,
+      width: 40,
+      decoration: BoxDecoration(
+        color: Colors.transparent,
+        border:
+            Border.all(color: isSelected ? kPrimaryColor : Colors.transparent),
+        shape: BoxShape.circle,
+      ),
+
