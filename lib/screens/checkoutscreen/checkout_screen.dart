@@ -100,7 +100,7 @@ late Product cart;
               // Replace this with your actual list of items
               ListTile(
                 leading: Image.asset("assets/images/AF1.png"),
-                title: Text("Headset"),
+                title: Text("Action Figure Tentara \nWWII - 3D"),
                 subtitle: const Text('\Rp.99.99   x3'),
               ),
               // Add more ListTiles for additional items
