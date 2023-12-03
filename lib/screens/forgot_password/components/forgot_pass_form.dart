@@ -53,3 +53,28 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
               }
               return null;
             },
+            decoration: const InputDecoration(
+              labelText: "Email",
+              hintText: "Masukkan email kamu",
+              // If  you are using latest version of flutter then lable text and hint text shown like this
+              // if you r using flutter less then 1.20.* then maybe this is not working properly
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+            ),
+          ),
+          const SizedBox(height: 8),
+          FormError(errors: errors),
+          const SizedBox(height: 8),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, OtpScreen.routeName);
+            },
+            child: const Text("Lanjutkan"),
+          ),
+          const SizedBox(height: 16),
+          const NoAccountText(),
+        ],
+      ),
+    );
+  }
+}
