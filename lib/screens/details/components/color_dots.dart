@@ -11,3 +11,19 @@ class ColorDots extends StatelessWidget {
   }) : super(key: key);
 
   final Product product;
+  
+  @override
+  Widget build(BuildContext context) {
+    // Now this is fixed and only for demo
+    int selectedColor = 3;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        children: [
+          ...List.generate(
+            product.colors.length,
+            (index) => ColorDot(
+              color: product.colors[index],
+              isSelected: index == selectedColor,
+            ),
+          ),
