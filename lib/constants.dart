@@ -18,3 +18,17 @@ const headingStyle = TextStyle(
   color: Colors.black,
   height: 1.5,
 );
+
+const defaultDuration = Duration(milliseconds: 250);
+
+// Form Error
+final RegExp emailValidatorRegExp =
+    RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+const String kEmailNullError = "Silahkan masukkan email";
+const String kInvalidEmailError = "Silahkan masukkan Email yang valid";
+const String kPassNullError = "Silahkan masukkan password";
+const String kShortPassError = "Password terlalu pendek";
+const String kMatchPassError = "Password tidak sesuai";
+const String kNamelNullError = "Silahkan masukkan nama anda";
+const String kPhoneNumberNullError = "Silahkan masukkan nomor HP anda";
+const String kAddressNullError = "Silahkan masukkan alamat anda";
