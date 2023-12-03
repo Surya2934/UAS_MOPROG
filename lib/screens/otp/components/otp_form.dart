@@ -11,3 +11,30 @@ class OtpForm extends StatefulWidget {
   @override
   _OtpFormState createState() => _OtpFormState();
 }
+
+class _OtpFormState extends State<OtpForm> {
+  FocusNode? pin2FocusNode;
+  FocusNode? pin3FocusNode;
+  FocusNode? pin4FocusNode;
+
+  @override
+  void initState() {
+    super.initState();
+    pin2FocusNode = FocusNode();
+    pin3FocusNode = FocusNode();
+    pin4FocusNode = FocusNode();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    pin2FocusNode!.dispose();
+    pin3FocusNode!.dispose();
+    pin4FocusNode!.dispose();
+  }
+
+  void nextField(String value, FocusNode? focusNode) {
+    if (value.length == 1) {
+      focusNode!.requestFocus();
+    }
+  }
