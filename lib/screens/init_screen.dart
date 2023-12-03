@@ -23,7 +23,6 @@ class _InitScreenState extends State<InitScreen> {
       currentSelectedIndex = index;
     });
   }
-
   final pages = [
     const HomeScreen(),
     const FavoriteScreen(),
