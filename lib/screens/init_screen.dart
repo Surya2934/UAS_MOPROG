@@ -15,3 +15,17 @@ class InitScreen extends StatefulWidget {
   @override
   State<InitScreen> createState() => _InitScreenState();
 }
+class _InitScreenState extends State<InitScreen> {
+  int currentSelectedIndex = 0;
+
+  void updateCurrentIndex(int index) {
+    setState(() {
+      currentSelectedIndex = index;
+    });
+  }
+
+  final pages = [
+    const HomeScreen(),
+    const FavoriteScreen(),
+    const CartScreen()
+  ];
