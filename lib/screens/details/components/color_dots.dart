@@ -43,3 +43,14 @@ class ColorDots extends StatelessWidget {
     );
   }
 }
+
+class ColorDot extends StatelessWidget {
+  const ColorDot({
+    Key? key,
+    required this.color,
+    this.isSelected = false,
+  }) : super(key: key);
+
+  final Color color;
+  final bool isSelected;
+
