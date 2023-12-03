@@ -134,3 +134,21 @@ List<Product> demoProducts = [
     rating: 5.0,
     isPopular: true,
   ),
+  Product(
+    id: 7,
+    images: [
+      "assets/images/Kamera.png",
+    ],
+    colors: [
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Kamera LEBAY 4k60fps",
+    price: 999.999,
+    description: description,
+    rating: 4.4,
+    isFavourite: true,
+    isPopular: true,
+  ),
