@@ -99,7 +99,7 @@ late Product cart;
               // List of items with images, names, and prices
               // Replace this with your actual list of items
               ListTile(
-                leading: Image.asset("assets/images/AF1.png"),
+                leading: Image.asset("assets/images/headset.png"),
                 title: Text("Headset"),
                 subtitle: const Text('\Rp.99.99   x3'),
               ),
