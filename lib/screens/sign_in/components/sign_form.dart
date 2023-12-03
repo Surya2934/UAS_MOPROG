@@ -28,3 +28,11 @@ class _SignFormState extends State<SignForm> {
       });
     }
   }
+
+  void removeError({String? error}) {
+    if (errors.contains(error)) {
+      setState(() {
+        errors.remove(error);
+      });
+    }
+  }
