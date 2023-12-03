@@ -60,3 +60,36 @@ class CheckoutCard extends StatelessWidget {
                 )
               ],
             ),
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                const Expanded(
+                  child: Text.rich(
+                    TextSpan(
+                      text: "Total:\n",
+                      children: [
+                        TextSpan(
+                          text: "\Rp.30.000",
+                          style: TextStyle(fontSize: 16, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, CheckoutScreen.routeName);
+                    },
+                    child: const Text("CheckOut"),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
