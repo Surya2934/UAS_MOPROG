@@ -28,3 +28,19 @@ class LoginSuccessScreen extends StatelessWidget {
               color: Colors.black,
             ),
           ),
+          const Spacer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, InitScreen.routeName);
+              },
+              child: const Text("Kembali ke home"),
+            ),
+          ),
+          const Spacer(),
+        ],
+      ),
+    );
+  }
+}
