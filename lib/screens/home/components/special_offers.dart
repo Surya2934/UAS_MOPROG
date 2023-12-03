@@ -18,3 +18,7 @@ class SpecialOffers extends StatelessWidget {
             press: () {},
           ),
         ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
