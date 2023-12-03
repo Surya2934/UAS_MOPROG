@@ -51,3 +51,41 @@ class ProductDescription extends StatelessWidget {
             ),
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 20,
+            right: 64,
+          ),
+          child: Text(
+            product.description,
+            maxLines: 3,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 12,
+          ),
+          child: GestureDetector(
+            onTap: () {},
+            child: const Row(
+              children: [
+                Text(
+                  "Lihat Lebih Detail",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w600, color: kPrimaryColor),
+                ),
+                SizedBox(width: 5),
+                Icon(
+                  Icons.arrow_forward_ios,
+                  size: 12,
+                  color: kPrimaryColor,
+                ),
+              ],
+            ),
+          ),
+        )
+      ],
+    );
+  }
+}
