@@ -21,3 +21,44 @@ class IconBtnWithCounter extends StatelessWidget {
       onTap: press,
       child: Stack(
         clipBehavior: Clip.none,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(12),
+            height: 46,
+            width: 46,
+            decoration: BoxDecoration(
+              color: kSecondaryColor.withOpacity(0.1),
+              shape: BoxShape.circle,
+            ),
+            child: SvgPicture.asset(svgSrc),
+          ),
+          if (numOfitem != 0)
+            Positioned(
+              top: -3,
+              right: 0,
+              child: Container(
+                height: 20,
+                width: 20,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 60, 176, 91),
+                  shape: BoxShape.circle,
+                  border: Border.all(width: 1.5, color: Colors.white),
+                ),
+                child: Center(
+                  child: Text(
+                    "$numOfitem",
+                    style: const TextStyle(
+                      fontSize: 12,
+                      height: 1,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            )
+        ],
+      ),
+    );
+  }
+}
