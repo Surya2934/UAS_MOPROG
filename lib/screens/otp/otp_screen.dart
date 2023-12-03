@@ -14,3 +14,15 @@ class OtpScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Verifikasi OTP"),
       ),
+      body: SizedBox(
+        width: double.infinity,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(height: 16),
+                const Text(
+                  "Verifikasi OTP",
+                  style: headingStyle,
+                ),
