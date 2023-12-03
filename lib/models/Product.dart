@@ -62,3 +62,22 @@ List<Product> demoProducts = [
     rating: 4.1,
     isPopular: true,
   ),
+  Product(
+    id: 3,
+    images: [
+      "assets/images/AF1.png",
+      "assets/images/AF2.png",
+      "assets/images/AF3.png",
+    ],
+    colors: [
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      Colors.white,
+    ],
+    title: "Action Figure Tentara WWII - 3D",
+    price: 399.999,
+    description: description,
+    rating: 4.6,
+    isFavourite: true,
+    isPopular: true,
+  ),
