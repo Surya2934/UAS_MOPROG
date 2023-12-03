@@ -73,3 +73,55 @@ late Product cart;
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
+
+              DropdownButton<String>(
+                value: selectedPaymentMethod,
+                onChanged: (String? newValue) {
+                  setState(() {
+                    selectedPaymentMethod = newValue!;
+                  });
+                },
+                items: <String>['Kartu Kredit', 'Gopay', 'Bank']
+                    .map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+              ),
+
+              const SizedBox(height: 16),
+              const Text(
+                'Barang',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 8),
+              // List of items with images, names, and prices
+              // Replace this with your actual list of items
+              ListTile(
+                leading: Image.asset("assets/images/wireless headset.png"),
+                title: Text("Headset"),
+                subtitle: const Text('\Rp.99.99   x3'),
+              ),
+              // Add more ListTiles for additional items
+              const Row(children: [
+                Spacer(),
+                Text("Total"),
+                Spacer(),
+                Text('\Rp.40000')
+              ]),
+
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {
+                  // Add your checkout logic here
+                },
+                child: const Text('Checkout'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
