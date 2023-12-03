@@ -24,3 +24,18 @@ class _SplashContentState extends State<SplashContent> {
           width: 150,
           child: Image.asset('assets/logo.png'),
         ),
+        Text(
+          widget.text!,
+          textAlign: TextAlign.center,
+        ),
+        const Spacer(flex: 2),
+        Image.asset(
+          widget.image!,
+          height: 265,
+          width: 235,
+        ),
+      ],
+    );
+  }
+}
+
