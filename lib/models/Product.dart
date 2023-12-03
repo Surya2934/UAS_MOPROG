@@ -116,3 +116,21 @@ List<Product> demoProducts = [
     isFavourite: true,
     isPopular: true,
   ),
+  Product(
+    id: 6,
+    images: [
+      "assets/images/HP1.png",
+      "assets/images/HP2.png",
+      "assets/images/HP3.png",
+    ],
+    colors: [
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Casing Iphone 20 Pro - AntiCrack",
+    price: 99.999,
+    description: description,
+    rating: 5.0,
+    isPopular: true,
+  ),
