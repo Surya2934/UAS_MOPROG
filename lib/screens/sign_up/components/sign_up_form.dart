@@ -105,3 +105,48 @@ class _SignUpFormState extends State<SignUpForm> {
           TextFormField(
             obscureText: true,
             onSaved: (newValue) => conform_password = newValue,
+            onChanged: (value) {
+              if (value.isNotEmpty) {
+                removeError(error: kPassNullError);
+              } else if (value.isNotEmpty && password == conform_password) {
+                removeError(error: kMatchPassError);
+              }
+              conform_password = value;
+            },
+            validator: (value) {
+              if (value!.isEmpty) {
+                addError(error: kPassNullError);
+                return "";
+              } else if ((password != value)) {
+                addError(error: kMatchPassError);
+                return "";
+              }
+              return null;
+            },
+            decoration: const InputDecoration(
+              labelText: "Konfirmasi Password",
+              hintText: "Masukkan lagi password kamu",
+              // If  you are using latest version of flutter then lable text and hint text shown like this
+              // if you r using flutter less then 1.20.* then maybe this is not working properly
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+            ),
+          ),
+          FormError(errors: errors),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+                _formKey.currentState!.save();
+                // if all are valid then go to success screen
+                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+              }
+            },
+            child: const Text("Lanjutkan"),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
