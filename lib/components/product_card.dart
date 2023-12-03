@@ -16,3 +16,24 @@ class ProductCard extends StatelessWidget {
   final double width, aspectRetio;
   final Product product;
   final VoidCallback onPress;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: width,
+      child: GestureDetector(
+        onTap: onPress,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AspectRatio(
+              aspectRatio: 1.02,
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: kSecondaryColor.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Image.asset(product.images[0]),
+              ),
+            ),
