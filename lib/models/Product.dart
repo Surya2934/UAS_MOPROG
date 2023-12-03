@@ -152,3 +152,20 @@ List<Product> demoProducts = [
     isFavourite: true,
     isPopular: true,
   ),
+  Product(
+    id: 8,
+    images: [
+      "assets/images/LipstikTaylor.png",
+    ],
+    colors: [
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Lipstik Mbak Taylor Swift",
+    price: 999.999,
+    description: description,
+    rating: 5.0,
+    isFavourite: true,
+  ),
