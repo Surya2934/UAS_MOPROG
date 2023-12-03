@@ -26,3 +26,20 @@ class OtpScreen extends StatelessWidget {
                   "Verifikasi OTP",
                   style: headingStyle,
                 ),
+                const Text("Kami telah mengirimkan kode ke\n            nomor 08******56"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("Kode akan kadaluarsa dalam: "),
+                    TweenAnimationBuilder(
+                      tween: Tween(begin: 30.0, end: 0.0),
+                      duration: const Duration(seconds: 30),
+                      builder: (_, dynamic value, child) => Text(
+                        "00:${value.toInt()}",
+                        style: const TextStyle(color: kPrimaryColor),
+                      ),
+                    ),
+                  ],
+                ),
+                const OtpForm(),
+                const SizedBox(height: 20),
