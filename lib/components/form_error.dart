@@ -6,3 +6,13 @@ class FormError extends StatelessWidget {
     Key? key,
     required this.errors,
   }) : super(key: key);
+
+  final List<String?> errors;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: List.generate(
+          errors.length, (index) => formErrorText(error: errors[index]!)),
+    );
+  }
