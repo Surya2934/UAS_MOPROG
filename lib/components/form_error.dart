@@ -16,3 +16,20 @@ class FormError extends StatelessWidget {
           errors.length, (index) => formErrorText(error: errors[index]!)),
     );
   }
+
+  Row formErrorText({required String error}) {
+    return Row(
+      children: [
+        SvgPicture.asset(
+          "assets/icons/Error.svg",
+          height: 16,
+          width: 16,
+        ),
+        const SizedBox(
+          width: 10,
+        ),
+        Text(error),
+      ],
+    );
+  }
+}
