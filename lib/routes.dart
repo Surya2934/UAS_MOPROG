@@ -13,6 +13,7 @@ import 'screens/otp/otp_screen.dart';
 import 'screens/sign_in/sign_in_screen.dart';
 import 'screens/sign_up/sign_up_screen.dart';
 import 'screens/splash/splash_screen.dart';
+import 'screens/succes_payment/success_screen.dart';
 
 
 
@@ -30,4 +31,5 @@ final Map<String, WidgetBuilder> routes = {
   CartScreen.routeName: (context) => const CartScreen(),
   CheckoutScreen.routeName: (context) => CheckoutScreen(),
   Splash.routeName: (context) => Splash(),
+  SuccessPayment.routeName: (context) => SuccessPayment(),
 };
