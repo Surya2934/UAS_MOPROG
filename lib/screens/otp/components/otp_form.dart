@@ -74,3 +74,34 @@ class _OtpFormState extends State<OtpForm> {
                   onChanged: (value) => nextField(value, pin3FocusNode),
                 ),
               ),
+              SizedBox(
+                width: 60,
+                child: TextFormField(
+                  focusNode: pin3FocusNode,
+                  obscureText: true,
+                  style: const TextStyle(fontSize: 24),
+                  keyboardType: TextInputType.number,
+                  textAlign: TextAlign.center,
+                  decoration: otpInputDecoration,
+                  onChanged: (value) => nextField(value, pin4FocusNode),
+                ),
+              ),
+              SizedBox(
+                width: 60,
+                child: TextFormField(
+                  focusNode: pin4FocusNode,
+                  obscureText: true,
+                  style: const TextStyle(fontSize: 24),
+                  keyboardType: TextInputType.number,
+                  textAlign: TextAlign.center,
+                  decoration: otpInputDecoration,
+                  onChanged: (value) {
+                    if (value.length == 1) {
+                      pin4FocusNode!.unfocus();
+                      // Then you need to check is the code is correct or not
+                    }
+                  },
+                ),
+              ),
+            ],
+          ),
