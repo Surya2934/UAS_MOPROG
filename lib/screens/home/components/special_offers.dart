@@ -55,3 +55,17 @@ class SpecialOffers extends StatelessWidget {
                 },
               ),
             ],
+            ),
+        ),
+        const SizedBox(width: 40),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SectionTitle(
+            title: "Kategori",
+            press: () {},
+          ),
+        )
+      ],
+    );
+  }
+}
