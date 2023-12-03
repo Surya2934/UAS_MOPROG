@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../components/custom_surfix_icon.dart';
 import '../../../components/form_error.dart';
 import '../../../constants.dart';
-import '../../complete_profile/complete_profile_screen.dart';
+import '../../home/home_screen.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -139,7 +139,7 @@ class _SignUpFormState extends State<SignUpForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
-                Navigator.pushNamed(context, CompleteProfileScreen.routeName);
+                Navigator.pushNamed(context, HomeScreen.routeName);
               }
             },
             child: const Text("Lanjutkan"),
