@@ -98,3 +98,21 @@ List<Product> demoProducts = [
     rating: 4.2,
     isFavourite: true,
   ),
+  Product(
+    id: 5,
+    images: [
+      "assets/images/Dandan.png",
+    ],
+    colors: [
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Kaca Portable Lebay",
+    price: 49.999,
+    description: description,
+    rating: 4.8,
+    isFavourite: true,
+    isPopular: true,
+  ),
