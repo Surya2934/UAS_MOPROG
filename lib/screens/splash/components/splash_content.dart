@@ -13,3 +13,14 @@ class SplashContent extends StatefulWidget {
   @override
   State<SplashContent> createState() => _SplashContentState();
 }
+class _SplashContentState extends State<SplashContent> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        const Spacer(),
+        Container(
+          height: 50,
+          width: 150,
+          child: Image.asset('assets/logo.png'),
+        ),
