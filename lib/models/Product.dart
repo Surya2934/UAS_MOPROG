@@ -81,3 +81,20 @@ List<Product> demoProducts = [
     isFavourite: true,
     isPopular: true,
   ),
+  Product(
+    id: 4,
+    images: [
+      "assets/images/BodyCream.png",
+    ],
+    colors: [
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Body Cream LEBAY",
+    price: 99.999,
+    description: description,
+    rating: 4.2,
+    isFavourite: true,
+  ),
