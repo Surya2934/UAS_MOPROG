@@ -27,3 +27,19 @@ class ColorDots extends StatelessWidget {
               isSelected: index == selectedColor,
             ),
           ),
+          const Spacer(),
+          RoundedIconBtn(
+            icon: Icons.remove,
+            press: () {},
+          ),
+          const SizedBox(width: 20),
+          RoundedIconBtn(
+            icon: Icons.add,
+            showShadow: true,
+            press: () {},
+          ),
+        ],
+      ),
+    );
+  }
+}
