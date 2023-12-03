@@ -115,7 +115,7 @@ late Product cart;
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, SuccesPayment.routeName);
+                  Navigator.pushNamed(context, SuccessPayment.routeName);
                 },
                 child: const Text('Checkout'),
               ),
