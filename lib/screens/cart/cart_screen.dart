@@ -12,3 +12,21 @@ class CartScreen extends StatefulWidget {
   @override
   State<CartScreen> createState() => _CartScreenState();
 }
+class _CartScreenState extends State<CartScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Column(
+          children: [
+            const Text(
+              "Your Cart",
+              style: TextStyle(color: Colors.black),
+            ),
+            Text(
+              "${demoCarts.length} items",
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+          ],
+        ),
+      ),
