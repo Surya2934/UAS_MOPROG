@@ -186,4 +186,24 @@ List<Product> demoProducts = [
     rating: 3.9,
     isFavourite: true,
   ),
-  
+  Product(
+    id: 10,
+    images: [
+      "assets/images/RiceCooker.png",
+    ],
+    colors: [
+      const Color(0xFFF6625E),
+      const Color(0xFF836DB8),
+      const Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Rice Cooker Bekas Uncle Roger",
+    price: 499.999,
+    description: description,
+    rating: 4.5,
+    isFavourite: true,
+  ),
+];
+
+const String description =
+    "Semua barang yang dijual di LEBAY sudah tersertifikat halal";
