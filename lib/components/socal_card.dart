@@ -6,3 +6,5 @@ class SocalCard extends StatelessWidget {
     this.icon,
     this.press,
   }) : super(key: key);
+  final String? icon;
+  final Function? press;
