@@ -37,3 +37,20 @@ class ProductCard extends StatelessWidget {
                 child: Image.asset(product.images[0]),
               ),
             ),
+            const SizedBox(height: 8),
+            Text(
+              product.title,
+              style: Theme.of(context).textTheme.bodyMedium,
+              maxLines: 2,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "\Rp.${product.price}",
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: kPrimaryColor,
+                  ),
+                ),
