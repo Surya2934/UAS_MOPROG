@@ -128,3 +128,16 @@ class _SignFormState extends State<SignForm> {
               )
             ],
           ),
+          FormError(errors: errors),
+          const SizedBox(height: 16),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+            },
+            child: const Text("Lanjutkan"),
+          ),
+        ],
+      ),
+    );
+  }
+}
