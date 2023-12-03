@@ -99,9 +99,9 @@ late Product cart;
               // List of items with images, names, and prices
               // Replace this with your actual list of items
               ListTile(
-                leading: Image.asset("assets/images/wireless headset.png"),
-                title: Text("Headset"),
-                subtitle: const Text('\Rp.99.99   x3'),
+                leading: Image.asset("assets/images/AF1.png"),
+                title: Text("Action Figure Tentara \nWWII - 3D"),
+                subtitle: const Text('\Rp.499.999   x3'),
               ),
               // Add more ListTiles for additional items
               const Row(children: [
