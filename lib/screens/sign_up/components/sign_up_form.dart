@@ -6,3 +6,7 @@ import '../../complete_profile/complete_profile_screen.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
+  
+  @override
+  _SignUpFormState createState() => _SignUpFormState();
+}
